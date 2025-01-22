@@ -1,6 +1,6 @@
 # RAM assumable role example
 
-This example illustrates how to create a more complicated assumable role.
+This example illustrates how to create a assumable role with trust policy customized.
 
 # Usage
 
@@ -22,10 +22,7 @@ No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | 1.238.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | 3.6.3 |
+No providers.
 
 ## Modules
 
@@ -35,11 +32,7 @@ No requirements.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [alicloud_ram_policy.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/ram_policy) | resource |
-| [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
-| [alicloud_account.this](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/account) | data source |
+No resources.
 
 ## Inputs
 
