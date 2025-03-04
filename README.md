@@ -77,7 +77,6 @@ module "ram_role" {
 
 * [basic](https://github.com/terraform-alicloud-modules/terraform-alicloud-ram-role/blob/master/examples/basic)
 * [complete](https://github.com/terraform-alicloud-modules/terraform-alicloud-ram-role/blob/master/examples/complete)
-* [complete-new](https://github.com/terraform-alicloud-modules/terraform-alicloud-ram-role/blob/master/examples/complete-new)
 * [custom-trust-policy](https://github.com/terraform-alicloud-modules/terraform-alicloud-ram-role/blob/master/examples/custom-trust-policy)
 * [for-saml](https://github.com/terraform-alicloud-modules/terraform-alicloud-ram-role/blob/master/examples/for-saml)
 
