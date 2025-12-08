@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/alibabacloud-automation/terraform-alicloud-ram-role/compare/v2.0.0...v2.0.1) (2025-12-08)
+
+
+### Bug Fixes
+
+* fix assume_role_document principal format ([81a4f19](https://github.com/alibabacloud-automation/terraform-alicloud-ram-role/commit/81a4f191e115be25f3155fef5e149030885c7e0c))
+
 ## 2.1.0 (Unreleased)
 ## 2.0.0 (March 5, 2025)
 
