@@ -9,8 +9,10 @@ locals {
   admin_role_policy_name    = "AdministratorAccess"
   readonly_role_policy_name = "ReadOnlyAccess"
 
-  trusted_principal_arns = jsonencode(var.trusted_principal_arns)
-  trusted_services       = jsonencode(var.trusted_services)
+  principal_map = merge(
+    length(var.trusted_principal_arns) > 0 ? { RAM = var.trusted_principal_arns } : {},
+    length(var.trusted_services) > 0 ? { Service = var.trusted_services } : {}
+  )
 
   assume_role_document = <<EOF
 		{
@@ -18,10 +20,7 @@ locals {
                 {
                     "Action": "sts:AssumeRole",
                     "Effect": "Allow",
-                    "Principal": {
-                        "RAM": ${local.trusted_principal_arns},
-                        "Service": ${local.trusted_services}
-                    }
+                    "Principal": ${jsonencode(local.principal_map)}
                 }
             ],
               "Version": "1"
@@ -34,10 +33,7 @@ locals {
                 {
                     "Action": "sts:AssumeRole",
                     "Effect": "Allow",
-                    "Principal": {
-                        "RAM": ${local.trusted_principal_arns},
-                        "Service": ${local.trusted_services}
-                    },
+                    "Principal": ${jsonencode(local.principal_map)},
                     "Condition": {
                         "Bool": {
                             "acs:MFAPresent": ["true"]
